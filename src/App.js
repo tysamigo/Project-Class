@@ -30,13 +30,13 @@ function App() {
                 </nav>
             </div>
             <div className="body">
-<p>I'm before the router switch!</p>
+
                 <Switch>
                     <Route exact path="/" component={WhatIsIt} />
                     <Route path="/parts" component={Parts} />
                     <Route component={NotFound} />
                 </Switch>
-<p>Hello from App.js</p>
+
                 <footer>
                     <div className="container">
                         <div className="row p-4 text-muted">

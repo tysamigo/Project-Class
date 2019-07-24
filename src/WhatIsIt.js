@@ -11,9 +11,13 @@ class WhatIsIt extends React.Component {
     }
 
     componentDidMount() {
+        this.loadImageNames();
+    }
+
+    loadImageNames() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/image/names")
-            .then((imageNamesResponse) => {
-                this.setState({ imageNames: imageNamesResponse.data });
+            .then((response) => {
+                this.setState({ imageNames: response.data });
             });
     }
 
