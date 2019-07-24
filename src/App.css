@@ -1,0 +1,92 @@
+/* 
+***************************
+Carousel Styles
+*************************** */
+
+.carousel-item > img {
+  max-height: 525px;
+  margin: auto;
+}
+
+/* 
+***************************
+Navbar Styles
+*************************** */
+
+.navbar .navbar-nav .nav-link {
+  color: black;
+  font-size: 1.15rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: red;
+}
+
+
+/* 
+***************************
+Basic Styles
+*************************** */
+.body {
+  padding-top: 60px;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.fa-chevron-down {
+  font-size: 48px;
+  padding: 20px;
+  color: #cccccc;
+}
+
+#whatIsIt {
+  cursor: pointer;
+}
+
+#whatIsIt:hover {
+  color: red;
+}
+
+#vx {
+  font-family: usuzi;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.heading {
+  font-family: 'Lilita One', Arial, Helvetica, sans-serif;
+}
+
+.lead::first-letter {
+  font-size: 200%;
+  font-weight: 400;  
+}
+
+footer > div {
+  background-color: #E8E8E8;
+}
+
+footer .btn-link {
+  text-decoration: none;
+  color: gray;
+  padding: 0;
+  vertical-align: top;
+}
+
+footer .btn-link:hover {
+  color: blue;
+}
+
+/* 
+***************************
+Custom Isuzu Font
+*************************** */
+
+@font-face {
+  font-family: 'Usuzi';
+  src: url('assets/fonts/Usuzi.woff2') format('woff2'),
+      url('assets/fonts/Usuzi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
