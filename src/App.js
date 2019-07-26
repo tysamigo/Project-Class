@@ -21,9 +21,9 @@ function App() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <div className="navbar-nav ml-auto">
+                            <Link to="/" className="nav-item nav-link pr-3">Home</Link>
                             <Link to="/parts" className="nav-item nav-link pr-3">Parts</Link>
                             <Link to="/Maintenance" className="nav-item nav-link pr-3">Maintenance</Link>
-                            <Link to="/" className="nav-item nav-link pr-3">About</Link>
                         </div>
                     </div>
                 </nav>

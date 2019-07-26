@@ -43,7 +43,10 @@ class WhatIsIt extends React.Component {
                 <div className="row">
                     <div className="col text-center">
                         <h1 className="display-3 mt-0 p-0">
-                            <p id="whatIsIt">
+                            <p id="whatIsIt" onClick={(event) =>{
+                                event.currentTarget.style.display='none';
+                                this.body.style.display='';
+                            }}>
                                 What is it?
                         <i className="fas fa-chevron-down"></i>
                             </p>
@@ -52,7 +55,11 @@ class WhatIsIt extends React.Component {
                 </div>
             </div>
 
-            <div className="container mt-3">
+            <div 
+                className="container mt-3" 
+                style={{display:'none'}}
+                ref={(ref) => this.body=ref}
+            >
                 <div className="row">
                     <div className="col text-center mb-5">
                         <h1 id="vx">Isuzu VehiCross</h1>
