@@ -14,9 +14,13 @@ class WhatIsIt extends React.Component {
         this.loadImageNames();
     }
 
+    /**
+     * @summary Perform a GET call to the API for carousel image names
+     */
     loadImageNames() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/image/names")
             .then((response) => {
+                // Store image names in the component state
                 this.setState({ imageNames: response.data });
             });
     }
@@ -29,11 +33,16 @@ class WhatIsIt extends React.Component {
                         <Carousel
                             indicators
                         >
-                            {this.state.imageNames.map((imageName, index) => 
-                                <CarouselItem key={`carousel-item-${index}`}>
-                                    <img src={`https://webapi20190630041009.azurewebsites.net/api/image/${imageName}`} className="img-fluid d-block rounded" alt="Isuzu Vehicross" />
-                                </CarouselItem>
-                            )}
+                            {
+                                // Iterate over the image names and create a
+                                // carousel item for each image.
+                                // The image is served from the web service API
+                                this.state.imageNames.map((imageName, index) => 
+                                    <CarouselItem key={`carousel-item-${index}`}>
+                                        <img src={`https://webapi20190630041009.azurewebsites.net/api/image/${imageName}`} className="img-fluid d-block rounded" alt="Isuzu Vehicross" />
+                                    </CarouselItem>
+                                )
+                            }
                         </Carousel>
                     </div>
                 </div>

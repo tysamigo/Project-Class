@@ -30,6 +30,11 @@ function App() {
             </div>
             <div className="body">
 
+                {/* 
+                    This is the selector for the React router.
+                    This tells the router which component to map to
+                    each page the user vists.
+                */}
                 <Switch>
                     <Route exact path="/" component={WhatIsIt} />
                     <Route path="/parts" component={Parts} />
