@@ -30,8 +30,9 @@ class Parts extends React.Component {
 
     render() {
         return <Container>
-            <h1 mb="0">Parts</h1>
-            <p>This parts list contains replacement parts information listed in alphabetical order.</p>
+            <h1>Parts</h1>
+            <p>An API was created for this project and is hosted on a temporary Azure account.  This parts list, containing real parts information created from my real-life Isuzu VehiCross restoration project, is being generated via an API Call.
+            This is API Call #3.</p>
             <Table striped bordered hover>
                 <thead>
                     <tr>

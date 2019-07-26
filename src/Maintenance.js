@@ -31,8 +31,8 @@ class Maintenance extends React.Component {
     render() {
         return (
             <Container>
-                <h1 mb="0">Maintenance</h1>
-                <p>This list contains maintenance information.</p>
+                <h1>Maintenance</h1>
+                <p>An API was created for this project and is hosted on a temporary Azure account. This maintenance list, containing real maintenance information created from my real-life ownership of an Isuzu VehiCross, is being generated via an API Call. This is API Call #4.</p>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
