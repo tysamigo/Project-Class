@@ -3,7 +3,7 @@ import React from 'react';
 import { Table, Container } from 'react-bootstrap';
 import Axios from 'axios';
 
-class Parts extends React.Component {
+class Maintenance extends React.Component {
     constructor(props) {
         super(props);
 
@@ -19,22 +19,20 @@ class Parts extends React.Component {
     loadPartData() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/parts")
             .then((response) => {
-                this.setState({ partsArray: response.data });
+                this.setState({ maintenanceArray: response.data });
             });
     }
 
     render() {
         return <Container>
-        <h1 mb="0">Parts</h1>
-        <p>This parts list contains replacement parts information listed in alphabetical order.</p>
+        <h1 mb="0">Maintenance</h1>
+        <p>This list contains maintenance information.</p>
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Part Number</th>
-                    <th>Supplier</th>
-                    <th>Price</th>
-                    <th>Notes</th>
+                    <th>Date</th>
+                    <th>Service Performed</th>
+                    <th>Total Cost</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,4 +51,4 @@ class Parts extends React.Component {
     }
 }
 
-export default Parts;
+export default Maintenance;
