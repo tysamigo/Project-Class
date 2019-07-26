@@ -17,7 +17,7 @@ class Parts extends React.Component {
     }
 
     /**
-     * @summary Perform a GET call to the API for parts data
+     * @summary API Call #3: Perform a GET call to the API for parts data
      */
     loadPartData() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/parts")

@@ -15,7 +15,7 @@ class WhatIsIt extends React.Component {
     }
 
     /**
-     * @summary Perform a GET call to the API for carousel image names
+     * @summary API Call #1: Perform a GET call to the API for carousel image names
      */
     loadImageNames() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/image/names")
@@ -34,6 +34,7 @@ class WhatIsIt extends React.Component {
                             indicators
                         >
                             {
+                                // API Call #2
                                 // Iterate over the image names and create a
                                 // carousel item for each image.
                                 // The image is served from the web service API

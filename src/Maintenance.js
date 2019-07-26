@@ -17,7 +17,7 @@ class Maintenance extends React.Component {
     }
 
     /**
-     * @summary Perform a GET call to the API for maintenance data
+     * @summary API Call #4: Perform a GET call to the API for maintenance data
      */
     loadPartData() {
         Axios.get("https://webapi20190630041009.azurewebsites.net/api/maintenance")
