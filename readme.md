@@ -6,9 +6,8 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 
 ## Technical Summary
 
-*Bootstrap for UI
-
-*React for UI
+* Bootstrap for UI
+* React for UI
 
 ## Features
 
@@ -27,8 +26,7 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
             *See - I see it (i.e. oil leak, warning light, or smoke)
             *Smell - I smell it (i.e. gasoline, rotten eggs, or burning oil)
             *Ugh! - It won't start
-
-*How-To's Page
+* How-To's Page
     *Should support basic searching
     *Long Pages, vertical scrolling
     *Likely viewed on mobile while working on vehicle
@@ -45,8 +43,7 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
                 *If not found then add a how-to by using a template.
                 *User should be logged to be authorized to submit a template.
                 *Requires security (log in and auth)
-
-*Parts List Page
+* Parts List Page
     *Initially use a simple parts list
     *Show Illustrated Parts Diagram
     *Show table with labeled parts
