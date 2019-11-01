@@ -6,8 +6,8 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 
 ## Technical Summary
 
-*Bootstrap for UI
-*React for UI
+-Bootstrap for UI
+-React for UI
 
 ## Features
 
