@@ -16,7 +16,7 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
     * Page could lead to Solutions, How-To's and Parts List 
     * Troubleshoot vehicle by:
         * List of Common Problems (top 10 common problems).  If problem not listed, use Search
-        * By Category (12 categories listed)
+        * By Category (12 categories listed with many subcategories)
         * Warning Lights
         * Error Codes (OBD II and ABS Codes)
         * ++ Optional, only if I have time.
@@ -44,9 +44,15 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
                 * User should be logged to be authorized to submit a template.
                 * Requires security (log in and auth)
 * Parts List Page
+    - Note: IPL = Illustrated Parts List
     * Initially use a simple parts list
-    * Show Illustrated Parts Diagram
-    * Show table with labeled parts
+    * Show Parts Diagram w/IPL Numbers
+    * Show table with labeled parts.  Table fields for Parts List include:
+        * Name
+        * Isuzu Part Number
+        * IPL Number
+        * Description (includes technical notes)
+        * Replacement (Non-OEM Replacement Options)
     * ++ OPTIONAL Hover
         * Hover over part number to reveal extra info
         * Extra info includes a replacement part number from a non-factory source along with source info, pricing and tech notes
