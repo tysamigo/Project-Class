@@ -64,4 +64,24 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 
 ## Milestone List
 
-1. Create Troubleshoot Page
+* Week 1
+- Create Main Category Page
+- List all Categories
+
+* Category Page
+- List Problems for Categories
+
+
+* Week 2
+- Learn J.S. Objects
+- Create list of problems for each category
+
+
+* Week 3
+- Make Problem Page
+- List Problems & Solutions
+
+* Week 4
+- Upgrade U.I.
+- Add searching
+- Add more problems to look at
