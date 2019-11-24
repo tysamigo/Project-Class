@@ -6,12 +6,14 @@ import * as vxLogo from './assets/images/vx_logo_small_2.png';
 import { Switch, Route, BrowserRouter, Link } from 'react-router-dom';
 import NotFound from './NotFound';
 import Maintenance from './Maintenance';
+import Troubleshooting from './Troubleshooting';
+import Navbar from 'react-bootstrap/Navbar'
 
 function App() {
     return (
         <BrowserRouter>
             <div className="container-fluid">
-                <nav className="navbar navbar-expand-md bg-light mb-0 pb-0 mt-0 pt-0 fixed-top">
+                <Navbar collapseOnSelect expand="sm" bg-light mb-0 pb-0 mt-0 pt-0 fixed-top>
                     <Link to="/" className="navbar-brand">
                         <img className="navbar-brand img-fluid" src={vxLogo} alt="VehiCross Logo" />
                     </Link>
@@ -24,10 +26,12 @@ function App() {
                             <Link to="/" className="nav-item nav-link pr-3">Home</Link>
                             <Link to="/parts" className="nav-item nav-link pr-3">Parts</Link>
                             <Link to="/Maintenance" className="nav-item nav-link pr-3">Maintenance</Link>
+                            <Link to="/Troubleshooting" className="nav-item nav-link pr-3">Troubleshooting</Link>
                         </div>
                     </div>
-                </nav>
+                </Navbar>
             </div>
+            
             <div className="body">
 
                 {/* 
@@ -39,6 +43,7 @@ function App() {
                     <Route exact path="/" component={WhatIsIt} />
                     <Route path="/parts" component={Parts} />
                     <Route path="/Maintenance" component={Maintenance} />
+                    <Route path="/Troubleshooting" component={Troubleshooting} />
                     <Route component={NotFound} />
                 </Switch>
 

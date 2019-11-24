@@ -58,7 +58,7 @@ class WhatIsIt extends React.Component {
                                 this.body.style.display='';
                             }}>
                                 What is it?
-                        <i className="fas fa-chevron-down"></i>
+                                <i className="fas fa-chevron-down"></i>
                             </p>
                         </h1>
                     </div>
@@ -127,8 +127,8 @@ class WhatIsIt extends React.Component {
                             4-link rear suspension. So as long as you maintain on-earth orbit, VehiCross can attack most any
                         surface it encouters.<br /><br />
                             To learn more about the VehiCross including the interior, additional features and technical
-                        specs, visit the <a href="#">About VX</a> section. To see my personal VX and all of the
-                        modifications I've done over the years, visit <a href="#">My Story</a>.
+                        specs, visit the  section. To see my personal VX and all of the
+                        modifications I've done over the years, visit My Story.
                     </p>
                     </div>
                 </div>
