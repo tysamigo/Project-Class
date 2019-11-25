@@ -6,7 +6,7 @@ import * as vxLogo from './assets/images/vx_logo_small_2.png';
 import { Switch, Route, BrowserRouter, Link } from 'react-router-dom';
 import NotFound from './NotFound';
 import Maintenance from './Maintenance';
-import Troubleshooting from './Troubleshooting';
+import Troubleshooting from './Troubleshooting/Troubleshooting';
 import Navbar from 'react-bootstrap/Navbar'
 
 function App() {
