@@ -68,7 +68,7 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 - Create Main Category Page
 - List all Categories
 
-- Category Page
+- Category Component
 - List Problems for Categories
 
 
@@ -78,7 +78,7 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 
 
 ## Week 3
-- Make Problem Page
+- Make Problem Component
 - List Problems & Solutions
 
 ## Week 4
