@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, Container, ListGroup } from 'react-bootstrap';
 import Stepper from 'bs-stepper';
 import { Questions } from './Questions';
+import { Problems } from './Problems';
 
 class Troubleshooting extends React.Component {
     state = {
@@ -16,11 +17,10 @@ class Troubleshooting extends React.Component {
 
     chooseQuestion = (event) => {
         this.setState({
-            mainCategory: event.currentTarget.innerText
+            mainCategory: null /*event.currentTarget.innerText*/
         }, () => {
             this.stepper.next();
         });
-
         event.preventDefault();
     }
 
@@ -45,10 +45,10 @@ class Troubleshooting extends React.Component {
                 <h1 className="heading pb-5">Troubleshooting</h1>
                 <h3 className="pb-3">What's wrong with your VX?</h3>
 
-                <h4>{this.constructedValue}</h4>
-
                 <div id="stepper1" className="bs-stepper">
-                    <div className="bs-stepper-header">
+                    
+                    {/*Stepper Headers */}
+                    <div className="bs-stepper-header pb-3">
                         <div className="step" data-target="#questions">
                             <button className="step-trigger">
                                 <span className="bs-stepper-circle">1</span>
@@ -63,28 +63,35 @@ class Troubleshooting extends React.Component {
                             </button>
                         </div>
                         <div className="line"></div>
-                        <div className="step" data-target="#test-l-3">
+                        <div className="step" data-target="#solutions">
                             <button className="step-trigger">
                                 <span className="bs-stepper-circle">3</span>
-                                <span className="bs-stepper-label">Validate</span>
+                                <span className="bs-stepper-label">Solutions</span>
                             </button>
                         </div>
                     </div>
+                    
+                    {/* Stepper Content */}
                     <div className="bs-stepper-content">
+
+                        {/* Step 1 */}
                         <div id="questions" className="content">
                             <Questions chooseQuestion={this.chooseQuestion}/>                            
                         </div>
+
+                        {/* Step 2 */}
                         <div id="problems" className="content">
+                            <Problems  />*/}
                             <div>{this.state.mainCategory}</div>
                         </div>
-                        <div id="test-l-3" className="content text-center">
+
+                        {/* Step 3 */}
+                        <div id="solutions" className="content text-center">
                             <button type="submit" className="btn btn-primary mt-5">Submit</button>
                         </div>
+
                     </div>
                 </div>
-
-
-
             </Container>
         );
     }
