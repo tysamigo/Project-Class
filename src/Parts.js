@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 import { Table, Container } from 'react-bootstrap';
-import Axios from 'axios';
 
 class Parts extends React.Component {
 
