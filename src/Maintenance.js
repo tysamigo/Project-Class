@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
-import { Table, Container } from 'react-bootstrap';
-import Axios from 'axios';
+import { Container } from 'react-bootstrap';
 
 class Maintenance extends React.Component {
  
