@@ -2,7 +2,7 @@ import React from 'react';
 import * as pageNotFound from './assets/images/page_not_found.png';
 import { Container } from 'react-bootstrap';
 
-class NotFound extends React.Component {
+export default class NotFound extends React.Component {
     render() {
         return (
             <Container>
@@ -11,5 +11,3 @@ class NotFound extends React.Component {
         );
     }
 }
-
-export default NotFound;

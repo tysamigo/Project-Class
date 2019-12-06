@@ -2,7 +2,7 @@
 import React from 'react';
 import { Table, Container } from 'react-bootstrap';
 
-class Parts extends React.Component {
+export default class Parts extends React.Component {
 
     render() {
         return (
@@ -14,5 +14,3 @@ class Parts extends React.Component {
         );
     }
 }
-
-export default Parts;

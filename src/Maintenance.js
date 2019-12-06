@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-class Maintenance extends React.Component {
+export default class Maintenance extends React.Component {
  
     render() {
         return (
@@ -12,5 +12,3 @@ class Maintenance extends React.Component {
         );
     }
 }
-
-export default Maintenance;

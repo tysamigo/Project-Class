@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import { Carousel, CarouselItem } from 'react-bootstrap';
 
-class WhatIsIt extends React.Component {
+export default class WhatIsIt extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -136,5 +136,3 @@ class WhatIsIt extends React.Component {
         </>;
     }
 }
-
-export default WhatIsIt;
