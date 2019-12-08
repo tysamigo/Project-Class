@@ -10,7 +10,7 @@ export default class Solutions extends React.Component {
         if (this.props.questionKey === QUESTION_KEY_BRAKES) {
             solution = <BrakeSolutions solutionKey={this.props.solutionKey}/>;
         } else if (this.props.questionKey === QUESTION_KEY_ENGINE) {
-            solution = <EngineSolutions />;
+            solution = <EngineSolutions solutionKey={this.props.solutionKey} />;
         }
 
         return solution;
