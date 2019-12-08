@@ -1,12 +1,14 @@
 import React from 'react';
-import { Table, Container, ListGroup } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Stepper from 'bs-stepper';
 import { Questions } from './Questions';
 import { Problems } from './Problems';
+import Solutions from './Solutions/Solutions';
 
-class Troubleshooting extends React.Component {
+export default class Troubleshooting extends React.Component {
     state = {
-        mainCategory: null
+        questionKey: null,
+        solutionKey: null
     };
 
     constructor(props, context) {
@@ -15,13 +17,20 @@ class Troubleshooting extends React.Component {
         console.log('constructor');
     }
 
-    chooseQuestion = (event) => {
+    chooseQuestion = (questionKey) => {
         this.setState({
-            mainCategory: null /*event.currentTarget.innerText*/
+            questionKey: questionKey
         }, () => {
             this.stepper.next();
         });
-        event.preventDefault();
+    }
+
+    chooseProblem = (solutionKey) => {
+        this.setState({
+            solutionKey: solutionKey
+        }, () => {
+            this.stepper.next();
+        });
     }
 
     componentDidMount() {
@@ -45,6 +54,7 @@ class Troubleshooting extends React.Component {
                 <h1 className="heading pb-5">Troubleshooting</h1>
                 <h3 className="pb-3">What's wrong with your VX?</h3>
 
+                {/*Stepper Component */}
                 <div id="stepper1" className="bs-stepper">
                     
                     {/*Stepper Headers */}
@@ -81,13 +91,12 @@ class Troubleshooting extends React.Component {
 
                         {/* Step 2 */}
                         <div id="problems" className="content">
-                            <Problems  />*/}
-                            <div>{this.state.mainCategory}</div>
+                            <Problems questionKey={this.state.questionKey} chooseProblem={this.chooseProblem} />
                         </div>
 
                         {/* Step 3 */}
                         <div id="solutions" className="content text-center">
-                            <button type="submit" className="btn btn-primary mt-5">Submit</button>
+                            <Solutions questionKey={this.state.questionKey} solutionKey={this.state.solutionKey} />
                         </div>
 
                     </div>
@@ -96,5 +105,3 @@ class Troubleshooting extends React.Component {
         );
     }
 }
-
-export default Troubleshooting;
