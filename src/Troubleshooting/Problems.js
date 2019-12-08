@@ -2,6 +2,7 @@ import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { QUESTION_KEY_BRAKES, QUESTION_KEY_ENGINE, QUESTION_KEY_HEATING_AC, QUESTION_KEY_STEERING_HANDLING, QUESTION_KEY_TIRES_WHEELS } from './Questions';
 import { SOLUTION_KEY_GRINDING, SOLUTION_KEY_SQUEALING, SOLUTION_KEY_PULL, SOLUTION_KEY_HARD_PEDAL, SOLUTION_KEY_SPONGY_PEDAL, SOLUTION_KEY_PULSATING_PEDAL } from './Solutions/Brake';
+import { SOLUTION_KEY_ENGINE_1, SOLUTION_KEY_ENGINE_2, SOLUTION_KEY_ENGINE_3, SOLUTION_KEY_ENGINE_4, SOLUTION_KEY_ENGINE_5 } from './Solutions/Engine';
 
 export class Problems extends React.Component {
     render() {
@@ -18,11 +19,11 @@ export class Problems extends React.Component {
             </ListGroup>;
         } else if (this.props.questionKey === QUESTION_KEY_ENGINE) {
             listGroup = <ListGroup className="pb-5">
-                <ListGroup.Item action>Engine Problem 1</ListGroup.Item>
-                <ListGroup.Item action>Engine Problem 2</ListGroup.Item>
-                <ListGroup.Item action>Engine Problem 3</ListGroup.Item>
-                <ListGroup.Item action>Engine Problem 4</ListGroup.Item>
-                <ListGroup.Item action>Engine Problem 5</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_ENGINE_1)}>Engine Problem 1</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_ENGINE_2)}>Engine Problem 2</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_ENGINE_3)}>Engine Problem 3</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_ENGINE_4)}>Engine Problem 4</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_ENGINE_5)}>Engine Problem 5</ListGroup.Item>
             </ListGroup>;
         } else if (this.props.questionKey === QUESTION_KEY_HEATING_AC) {
             listGroup = <ListGroup className="pb-5">
