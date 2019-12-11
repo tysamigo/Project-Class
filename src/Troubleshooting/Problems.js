@@ -5,6 +5,7 @@ import { SOLUTION_KEY_GRINDING, SOLUTION_KEY_SQUEALING, SOLUTION_KEY_PULL, SOLUT
 import { SOLUTION_KEY_ENGINE_1, SOLUTION_KEY_ENGINE_2, SOLUTION_KEY_ENGINE_3, SOLUTION_KEY_ENGINE_4, SOLUTION_KEY_ENGINE_5 } from './Solutions/Engine';
 import { SOLUTION_KEY_HEATING_AC_1, SOLUTION_KEY_HEATING_AC_2, SOLUTION_KEY_HEATING_AC_3, SOLUTION_KEY_HEATING_AC_4, SOLUTION_KEY_HEATING_AC_5 } from './Solutions/HeatingAc';
 import { SOLUTION_KEY_STEERING_HANDLING_1, SOLUTION_KEY_STEERING_HANDLING_2, SOLUTION_KEY_STEERING_HANDLING_3, SOLUTION_KEY_STEERING_HANDLING_4, SOLUTION_KEY_STEERING_HANDLING_5 } from './Solutions/SteeringHandling';
+import { SOLUTION_KEY_TIRES_WHEELS_1, SOLUTION_KEY_TIRES_WHEELS_2, SOLUTION_KEY_TIRES_WHEELS_3, SOLUTION_KEY_TIRES_WHEELS_4, SOLUTION_KEY_TIRES_WHEELS_5 } from './Solutions/TiresWheels';
 
 export class Problems extends React.Component {
     render() {
@@ -45,11 +46,11 @@ export class Problems extends React.Component {
             </ListGroup>;
         } else if (this.props.questionKey === QUESTION_KEY_TIRES_WHEELS) {
             listGroup = <ListGroup className="pb-5">
-                <ListGroup.Item action>Tires & Wheels Problem 1</ListGroup.Item>
-                <ListGroup.Item action>Tires & Wheels Problem 2</ListGroup.Item>
-                <ListGroup.Item action>Tires & Wheels Problem 3</ListGroup.Item>
-                <ListGroup.Item action>Tires & Wheels Problem 4</ListGroup.Item>
-                <ListGroup.Item action>Tires & Wheels Problem 5</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_TIRES_WHEELS_1)}>Tires & Wheels Problem 1</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_TIRES_WHEELS_2)}>Tires & Wheels Problem 2</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_TIRES_WHEELS_3)}>Tires & Wheels Problem 3</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_TIRES_WHEELS_4)}>Tires & Wheels Problem 4</ListGroup.Item>
+                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_TIRES_WHEELS_5)}>Tires & Wheels Problem 5</ListGroup.Item>
             </ListGroup>;
         }
         return listGroup;
