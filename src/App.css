@@ -35,20 +35,6 @@ Basic Styles
   max-width: 100%;
 }
 
-.fa-chevron-down {
-  font-size: 48px;
-  padding: 20px;
-  color: #cccccc;
-}
-
-#whatIsIt {
-  cursor: pointer;
-}
-
-#whatIsIt:hover {
-  color: red;
-}
-
 #vx {
   font-family: usuzi;
   text-shadow: 4px 4px 4px #aaa;
