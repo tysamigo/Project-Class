@@ -1,75 +1,19 @@
 import React from 'react';
-import Axios from 'axios';
-import { Carousel, CarouselItem } from 'react-bootstrap';
+import { ImageCarousel } from './ImageCarousel';
 
 export default class WhatIsIt extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            imageNames: []
-        };
-    }
-
-    componentDidMount() {
-        this.loadImageNames();
-    }
-
-    /**
-     * @summary API Call #1: Perform a GET call to the API for carousel image names
-     */
-    loadImageNames() {
-        Axios.get("https://webapi20190630041009.azurewebsites.net/api/image/names")
-            .then((response) => {
-                // Store image names in the component state
-                this.setState({ imageNames: response.data });
-            });
-    }
 
     render() {
         return <>
             <div className="container-fluid" id="carouselWrapper">
                 <div className="row mb-4">
                     <div className="col p-0">
-                        <Carousel
-                            indicators
-                        >
-                            {
-                                // API Call #2
-                                // Iterate over the image names and create a
-                                // carousel item for each image.
-                                // The image is served from the web service API
-                                this.state.imageNames.map((imageName, index) => 
-                                    <CarouselItem key={`carousel-item-${index}`}>
-                                        <img src={`https://webapi20190630041009.azurewebsites.net/api/image/${imageName}`} className="img-fluid d-block rounded" alt="Isuzu Vehicross" />
-                                    </CarouselItem>
-                                )
-                            }
-                        </Carousel>
+                        <ImageCarousel />
                     </div>
                 </div>
             </div>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col text-center">
-                        <h1 className="display-3 mt-0 p-0">
-                            <p id="whatIsIt" onClick={(event) =>{
-                                event.currentTarget.style.display='none';
-                                this.body.style.display='';
-                            }}>
-                                What is it?
-                                <i className="fas fa-chevron-down"></i>
-                            </p>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div 
-                className="container mt-3" 
-                style={{display:'none'}}
-                ref={(ref) => this.body=ref}
-            >
+            <div className="container mt-3">
                 <div className="row">
                     <div className="col text-center mb-5">
                         <h1 id="vx">Isuzu VehiCross</h1>
