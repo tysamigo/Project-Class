@@ -97,8 +97,8 @@ class App extends React.Component {
                     </footer>
 
                     {/*Contact Tyler Modal*/}
-                    <Modal show={this.state.showContactDialog} onHide={this.closeContactDialog}>
-                        <Modal.Header closeButton>
+                    <Modal dialogClassName="bg-primary" show={this.state.showContactDialog} onHide={this.closeContactDialog}>
+                        <Modal.Header className="bg-primary text-white" closeButton>
                             <Modal.Title>Contact Tyler</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
