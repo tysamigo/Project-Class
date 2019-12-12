@@ -15,7 +15,8 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            showContactDialog: false
+            showContactDialog: false,
+            showSignUpDialog: false
         };
     }
 
@@ -28,6 +29,18 @@ class App extends React.Component {
     closeContactDialog = () => {
         this.setState({
             showContactDialog: false
+        });
+    }
+
+    showSignUpDialog = () => {
+        this.setState({
+            showSignUpDialog: true
+        });
+    }
+
+    closeSignUpDialog = () => {
+        this.setState({
+            showSignUpDialog: false
         });
     }
 
@@ -81,7 +94,7 @@ class App extends React.Component {
                                         up-to-date on new released revisions.
                                     </p>
 
-                                    <button type="button" className="btn btn-secondary mb-3">
+                                    <button onClick={this.showSignUpDialog} type="button" className="btn btn-secondary mb-3">
                                         Sign up now
                                     </button>
                                 </div>
@@ -123,10 +136,54 @@ class App extends React.Component {
                             </div>
                         </Modal.Body>
                     </Modal>
+
+                    {/*Sign-Up Modal*/}
+                    <Modal dialogClassName="bg-primary" show={this.state.showSignUpDialog} onHide={this.closeSignUpDialog}>
+                        <Modal.Header className="bg-primary text-white" closeButton>
+                            <Modal.Title>Sign Up</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form>
+                                <div className="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" className="form-control" id="name" />
+                                </div>
+                                <div className="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" className="form-control" id="email" />
+                                </div>
+                                <hr my-4 />
+                                <h6 className="form-group">Stay informed when new info is posted to the site.</h6>
+                                <h6 className="form-group">Choose one or more:</h6>
+                                <div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id="spareParts" />
+                                        <label className="custom-control-label" for="spareParts">Updated Spare Parts Compatibility List</label>                                    
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" id="ledChart" />
+                                        <label className="custom-control-label" for="ledChart">Updated LED Replacement Chart</label>
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="newMod" />
+                                        <label className="custom-control-label" for="newMod">New mods on my VX (w/write-up's)</label>                                    
+                                    </div>
+                                    <div className="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="howTo" />
+                                        <label className="custom-control-label" for="howTo">New How-To's posted</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div className="modal-footer">
+                                <button onClick={this.closeSignUpDialog} type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button onClick={this.closeSignUpDialog} type="button" className="btn btn-primary" data-dismiss="modal">Send</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
                 </div>
             </BrowserRouter>
-        );
+            );
+        }
     }
-}
-
+        
 export default App;
