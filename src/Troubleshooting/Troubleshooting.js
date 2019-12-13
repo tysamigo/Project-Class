@@ -51,7 +51,7 @@ export default class Troubleshooting extends React.Component {
 
         return (
             <Container className="pb-5">
-                <h1 className="heading pb-5">Troubleshooting</h1>
+                <h1 className="heading pb-5 mt-5">Troubleshooting</h1>
                 <h3 className="pb-3">What's wrong with your VX?</h3>
 
                 {/*Stepper Component */}

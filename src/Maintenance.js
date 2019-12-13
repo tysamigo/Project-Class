@@ -7,7 +7,7 @@ export default class Maintenance extends React.Component {
     render() {
         return (
             <Container className="heading pb-5">
-                <h1>Maintenance</h1>                
+                <h1 className="mt-5">Maintenance</h1>                
             </Container>
         );
     }
