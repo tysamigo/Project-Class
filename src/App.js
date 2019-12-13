@@ -50,7 +50,7 @@ class App extends React.Component {
 
                 {/*Navigation*/}
                 <div className="container-fluid">
-                    <Navbar collapseOnSelect expand="sm" bg-light mb-0 pb-0 mt-0 pt-0 fixed-top>
+                    <Navbar collapseOnSelect expand="sm" bg-light mb-0 pb-0 mt-0 pt-0>
                         <Link to="/" className="navbar-brand">
                             <img className="navbar-brand img-fluid" src={vxLogo} alt="VehiCross Logo" />
                         </Link>
@@ -158,7 +158,7 @@ class App extends React.Component {
                                 <div>
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" className="custom-control-input" id="spareParts" />
-                                        <label className="custom-control-label" for="spareParts">Updated Spare Parts Compatibility List</label>                                    
+                                        <label className="custom-control-label" for="spareParts">Updated Spare Parts Compatibility List</label>
                                     </div>
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" className="custom-control-input" id="ledChart" />
@@ -166,7 +166,7 @@ class App extends React.Component {
                                     </div>
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="newMod" />
-                                        <label className="custom-control-label" for="newMod">New mods on my VX (w/write-up's)</label>                                    
+                                        <label className="custom-control-label" for="newMod">New mods on my VX (w/write-up's)</label>
                                     </div>
                                     <div className="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="howTo" />
@@ -182,8 +182,8 @@ class App extends React.Component {
                     </Modal>
                 </div>
             </BrowserRouter>
-            );
-        }
+        );
     }
-        
+}
+
 export default App;
