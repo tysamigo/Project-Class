@@ -1,4 +1,5 @@
 import React from 'react';
+import BrakeGrindingSolution from './BrakeSolutions/BrakeGrindingSolution';
 
 export const SOLUTION_KEY_GRINDING = "grinding";
 export const SOLUTION_KEY_SQUEALING = "squealing";
@@ -12,7 +13,7 @@ export default class BrakeSolutions extends React.Component {
         let solution = null;
 
         if (this.props.solutionKey === SOLUTION_KEY_GRINDING) {
-            solution = <div>Here is what to do if your brakes are grinding!</div>;
+            solution = <div><BrakeGrindingSolution /></div>;
         } else if (this.props.solutionKey === SOLUTION_KEY_SQUEALING) {
             solution = <div>Here is what to do if your brakes are squealing!</div>;
         } else if (this.props.solutionKey === SOLUTION_KEY_PULL) {
