@@ -13,12 +13,12 @@ export class Problems extends React.Component {
 
         if (this.props.questionKey === QUESTION_KEY_BRAKES) {
             listGroup = <ListGroup className="pb-5">
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_GRINDING)}>Brakes grinding</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_SQUEALING)}>Brakes squealing</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_PULL)}>My brakes pull</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_HARD_PEDAL)}>I have a hard brake pedal</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_SPONGY_PEDAL)}>I have a spongy or low brake pedal</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseProblem(SOLUTION_KEY_PULSATING_PEDAL)}> I have a pulsating brake pedal</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseProblem(SOLUTION_KEY_GRINDING)}>Brakes grinding</ListGroup.Item>
+                <ListGroup.Item variant="light" action onClick={() => this.props.chooseProblem(SOLUTION_KEY_SQUEALING)}>Brakes squealing</ListGroup.Item>
+                <ListGroup.Item variant="light" action onClick={() => this.props.chooseProblem(SOLUTION_KEY_PULL)}>My brakes pull</ListGroup.Item>
+                <ListGroup.Item variant="light" action onClick={() => this.props.chooseProblem(SOLUTION_KEY_HARD_PEDAL)}>I have a hard brake pedal</ListGroup.Item>
+                <ListGroup.Item variant="light" action onClick={() => this.props.chooseProblem(SOLUTION_KEY_SPONGY_PEDAL)}>I have a spongy or low brake pedal</ListGroup.Item>
+                <ListGroup.Item variant="light" action onClick={() => this.props.chooseProblem(SOLUTION_KEY_PULSATING_PEDAL)}> I have a pulsating brake pedal</ListGroup.Item>
             </ListGroup>;
         } else if (this.props.questionKey === QUESTION_KEY_ENGINE) {
             listGroup = <ListGroup className="pb-5">

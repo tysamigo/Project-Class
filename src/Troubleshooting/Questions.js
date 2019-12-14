@@ -11,11 +11,11 @@ export class Questions extends React.Component {
     render() {
         return (
             <ListGroup className="pb-5">
-                <ListGroup.Item action onClick={() => this.props.chooseQuestion(QUESTION_KEY_BRAKES)}>Brakes</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseQuestion(QUESTION_KEY_ENGINE)}>Engine</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseQuestion(QUESTION_KEY_HEATING_AC)}>Heating & A/C</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseQuestion(QUESTION_KEY_STEERING_HANDLING)}>Steering & Handling</ListGroup.Item>
-                <ListGroup.Item action onClick={() => this.props.chooseQuestion(QUESTION_KEY_TIRES_WHEELS)}>Tires & Wheels</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseQuestion(QUESTION_KEY_BRAKES)}>Brakes</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseQuestion(QUESTION_KEY_ENGINE)}>Engine</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseQuestion(QUESTION_KEY_HEATING_AC)}>Heating & A/C</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseQuestion(QUESTION_KEY_STEERING_HANDLING)}>Steering & Handling</ListGroup.Item>
+                <ListGroup.Item action variant="light" onClick={() => this.props.chooseQuestion(QUESTION_KEY_TIRES_WHEELS)}>Tires & Wheels</ListGroup.Item>
             </ListGroup>
         );
     }
