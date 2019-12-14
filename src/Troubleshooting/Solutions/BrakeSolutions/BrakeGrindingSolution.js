@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import brakes1 from '../../../assets/images/brakes_1.jpg';
+import brakes2 from '../../../assets/images/brakes_2.jpg';
 
 export default class BreakGrindingSolution extends React.Component {
     render() {
@@ -24,7 +25,7 @@ export default class BreakGrindingSolution extends React.Component {
                         <Col>
                             <Card>
                                 <Card.Header as="h5">Rear Brakes</Card.Header>
-                                <Card.Img variant="top" src={brakes1} />
+                                <Card.Img variant="top" src={brakes2} />
                                 <Card.Body>
                                     <Card.Title>Replacing Rear Brake Pads</Card.Title>
                                     <Card.Text className="mt-2">
