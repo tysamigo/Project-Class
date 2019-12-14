@@ -9,8 +9,7 @@ export default class BreakGrindingSolution extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <p>Col 1 of 2</p>
-                            <Card style={{ width: '19rem' }}>
+                            <Card>
                                 <Card.Header as="h5">Front Brakes</Card.Header>
                                 <Card.Img variant="top" src={brakes1} />
                                 <Card.Body>
@@ -23,8 +22,7 @@ export default class BreakGrindingSolution extends React.Component {
                             </Card>
                         </Col>
                         <Col>
-                            <p>Col 2 of 2</p>
-                            <Card style={{ width: '19rem' }}>
+                            <Card>
                                 <Card.Header as="h5">Rear Brakes</Card.Header>
                                 <Card.Img variant="top" src={brakes1} />
                                 <Card.Body>
