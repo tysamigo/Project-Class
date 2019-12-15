@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 export default class NotFound extends React.Component {
     render() {
         return (
-            <Container>
+            <Container className="mb-5">
                 <img src={pageNotFound} alt="page not found" style={{maxWidth:'100%'}} />
             </Container>
         );
