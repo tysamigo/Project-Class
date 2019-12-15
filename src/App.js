@@ -9,6 +9,7 @@ import Maintenance from './Maintenance';
 import Troubleshooting from './Troubleshooting/Troubleshooting';
 import Navbar from 'react-bootstrap/Navbar'
 import { Modal } from 'react-bootstrap';
+import BrakeGrindingSolutionFrontBrakes from './Troubleshooting/Solutions/BrakeSolutions/BrakeGrindingSolutionFrontBrakes';
 
 class App extends React.Component {
     constructor(props) {
@@ -81,6 +82,7 @@ class App extends React.Component {
                         <Route path="/parts" component={Parts} />
                         <Route path="/Maintenance" component={Maintenance} />
                         <Route path="/Troubleshooting" component={Troubleshooting} />
+                        <Route path="/BrakeGrindingSolutionFrontBrakes" component={BrakeGrindingSolutionFrontBrakes} />
                         <Route component={NotFound} />
                     </Switch>
 
