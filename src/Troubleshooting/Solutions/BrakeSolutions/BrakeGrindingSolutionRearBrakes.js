@@ -85,6 +85,11 @@ export default class BrakeGrindingSolutionRearBrakes extends React.Component {
                                             <li>Duralast Brake Rotor 31084</li>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>Calipers</td>
+                                        <td>8973010991</td>
+                                        <td>Duralast Calipers MK8491</td>
+                                    </tr>
                                 </tbody>
                             </Table>
                         </Col>
