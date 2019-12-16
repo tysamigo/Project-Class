@@ -8,8 +8,9 @@ import NotFound from './NotFound';
 import Maintenance from './Maintenance';
 import Troubleshooting from './Troubleshooting/Troubleshooting';
 import Navbar from 'react-bootstrap/Navbar'
-import { Modal } from 'react-bootstrap';
+import { Modal, Nav } from 'react-bootstrap';
 import BrakeGrindingSolutionFrontBrakes from './Troubleshooting/Solutions/BrakeSolutions/BrakeGrindingSolutionFrontBrakes';
+import ScrollToTop from './ScrollToTop';
 
 class App extends React.Component {
     constructor(props) {
@@ -17,7 +18,8 @@ class App extends React.Component {
 
         this.state = {
             showContactDialog: false,
-            showSignUpDialog: false
+            showSignUpDialog: false,
+            showNav: false
         };
     }
 
@@ -45,28 +47,32 @@ class App extends React.Component {
         });
     }
 
+    navToggle = () => {
+        this.setState({
+            showNav: !this.state.showNav
+        });
+    }
+
     render() {
         return (
             <BrowserRouter>
-
+            
+                <ScrollToTop />
                 {/*Navigation*/}
                 <div className="container-fluid">
-                    <Navbar collapseOnSelect expand="sm" bg-light mb-0 pb-0 mt-0 pt-0>
+                    <Navbar expanded={this.state.showNav} fixed="top" collapseOnSelect expand="md" className="bg-light mb-0 pb-0 mt-0 pt-0">
                         <Link to="/" className="navbar-brand">
                             <img className="navbar-brand img-fluid" src={vxLogo} alt="VehiCross Logo" />
                         </Link>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <div className="navbar-nav ml-auto">
-                                <Link to="/" className="nav-item nav-link pr-3">Home</Link>
-                                <Link to="/parts" className="nav-item nav-link pr-3">Parts</Link>
-                                <Link to="/Maintenance" className="nav-item nav-link pr-3">Maintenance</Link>
-                                <Link to="/Troubleshooting" className="nav-item nav-link pr-3">Troubleshooting</Link>
-                            </div>
-                        </div>
+                        <Navbar.Toggle onClick={this.navToggle} ></Navbar.Toggle>
+                        <Navbar.Collapse>
+                            <Nav className="ml-auto">
+                                <Nav.Link onClick={this.navToggle} as={Link} to="/" className="nav-item nav-link pr-3">Home</Nav.Link>
+                                <Nav.Link onClick={this.navToggle} as={Link} to="/parts" className="nav-item nav-link pr-3">Parts</Nav.Link>
+                                <Nav.Link onClick={this.navToggle} as={Link} to="/Maintenance" className="nav-item nav-link pr-3">Maintenance</Nav.Link>
+                                <Nav.Link onClick={this.navToggle} as={Link} to="/Troubleshooting" className="nav-item nav-link pr-3">Troubleshooting</Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
                     </Navbar>
                 </div>
 
