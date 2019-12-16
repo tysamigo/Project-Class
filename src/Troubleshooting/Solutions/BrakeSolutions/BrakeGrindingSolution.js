@@ -35,7 +35,9 @@ export default class BrakeGrindingSolution extends React.Component {
                                     <Card.Text className="mt-2">
                                         Step by step instructions (with pics) on how to replace the Rear Brake Pads.
                                     </Card.Text>
-                                    <Button action variant="primary">Show me how</Button>
+                                    <Link to="/BrakeGrindingSolutionRearBrakes">
+                                        <Button action variant="primary">Show me how</Button>
+                                    </Link>
                                 </Card.Body>
                             </Card>
                         </Col>
