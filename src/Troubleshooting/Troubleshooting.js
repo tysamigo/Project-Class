@@ -22,6 +22,7 @@ export default class Troubleshooting extends React.Component {
             questionKey: questionKey
         }, () => {
             this.stepper.next();
+            window.scrollTo(0,0);
         });
     }
 
@@ -30,20 +31,15 @@ export default class Troubleshooting extends React.Component {
             solutionKey: solutionKey
         }, () => {
             this.stepper.next();
+            window.scrollTo(0,0);
         });
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
-
         this.stepper = new Stepper(document.querySelector('#stepper1'), {
             linear: false,
             animation: true
         });
-    }
-
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
     }
 
     render() {
@@ -60,21 +56,21 @@ export default class Troubleshooting extends React.Component {
                     {/*Stepper Headers */}
                     <div className="bs-stepper-header pb-3">
                         <div className="step" data-target="#questions">
-                            <button className="step-trigger">
+                            <button onClick={() => {this.setState({solutionKey: null, questionKey: null})}} className="step-trigger">
                                 <span className="bs-stepper-circle">1</span>
                                 <span className="bs-stepper-label">Questions</span>
                             </button>
                         </div>
                         <div className="line"></div>
                         <div className="step" data-target="#problems">
-                            <button className="step-trigger">
+                            <button onClick={() => this.setState({solutionKey: null})} disabled={!this.state.questionKey} className="step-trigger">
                                 <span className="bs-stepper-circle">2</span>
                                 <span className="bs-stepper-label">Problems</span>
                             </button>
                         </div>
                         <div className="line"></div>
                         <div className="step" data-target="#solutions">
-                            <button className="step-trigger">
+                            <button disabled={!this.state.solutionKey} className="step-trigger">
                                 <span className="bs-stepper-circle">3</span>
                                 <span className="bs-stepper-label">Solutions</span>
                             </button>
