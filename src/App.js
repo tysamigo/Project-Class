@@ -11,6 +11,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Modal, Nav } from 'react-bootstrap';
 import BrakeGrindingSolutionFrontBrakes from './Troubleshooting/Solutions/BrakeSolutions/BrakeGrindingSolutionFrontBrakes';
 import ScrollToTop from './ScrollToTop';
+import BrakeGrindingSolutionRearBrakes from './Troubleshooting/Solutions/BrakeSolutions/BrakeGrindingSolutionRearBrakes';
 
 class App extends React.Component {
     constructor(props) {
@@ -89,6 +90,7 @@ class App extends React.Component {
                         <Route path="/Maintenance" component={Maintenance} />
                         <Route path="/Troubleshooting" component={Troubleshooting} />
                         <Route path="/BrakeGrindingSolutionFrontBrakes" component={BrakeGrindingSolutionFrontBrakes} />
+                        <Route path="/BrakeGrindingSolutionRearBrakes" component={BrakeGrindingSolutionRearBrakes} />
                         <Route component={NotFound} />
                     </Switch>
 
