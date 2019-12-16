@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import brakes1 from './assets/images/brakes_1.jpg';
-import brakes2 from './assets/images/brakes_2.jpg';
 import oil1 from './assets/images/oil_1.jpg';
 import radiator1 from './assets/images/radiator_1.jpg';
 import transmission1 from './assets/images/transmission_1.jpg';
