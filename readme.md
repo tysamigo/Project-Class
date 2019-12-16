@@ -1,66 +1,54 @@
 # VehiCross Project
 
-## This readme is NOT up to date.  I am revising it now and it will be ready by midnight tonight.
-
 ## What is it
 
-Website that allows VehiCross owners to find solutions to most common vehicle problems. 
+Website that allows Isuzu VehiCross owners to find solutions to most common vehicle problems. 
 
 ## Technical Summary
 
 * Bootstrap for UI
 * React for UI
 
+* Due to the lack of time and knowledge of a back-end language we decided that I would hard-code "keys" and use props.  The next step is to learn Express and SQL to make the site the correct way.  For now, however, I focused everything on the front end, content, styling and fixing known React problems such as using the scroll.to function.
+
 ## Features
 
-* Troubleshooting Page
-    * Should support basic searching
-    * Page could lead to Solutions, How-To's and Parts List 
-    * Troubleshoot vehicle by:
-        * List of Common Problems (top 10 common problems).  If problem not listed, use Search
-        * By Category (12 categories listed with many subcategories)
-        * Warning Lights
-        * Error Codes (OBD II and ABS Codes)
-        * ++ Optional, only if I have time.
-            If you don't know what is wrong, you can start by symptoms:
-            * Feel - I feel it (i.e. hesitation, shimmy, vibration, or a pull)
-            * Hear - I hear it (i.e. a rattle, a knock, or a squeal)
-            * See - I see it (i.e. oil leak, warning light, or smoke)
-            * Smell - I smell it (i.e. gasoline, rotten eggs, or burning oil)
-            * Ugh! - It won't start
-* How-To's Page
-    * Should support basic searching
-    * Long Pages, vertical scrolling
-    * Likely viewed on mobile while working on vehicle
-    * How-To to be listed by:
-        * Categories
-            * 6 Categories total
-            * Each category with subcategories
-        * Dash Warning Lights
-        * OBD II Error Codes
-        * TOD/ABS Error Codes
-        * Search
-            * If not found then "Sorry Message"
-            * ++ OPTIONAL, if time allows
-                * If not found then add a how-to by using a template.
-                * User should be logged to be authorized to submit a template.
-                * Requires security (log in and auth)
+* Home
+    *Initial load presents a carousel.  Mousing over any part of the images pauses the carousel. 
+
+* Nav
+    *Responsive & styled w/CSS 
+    *Used NavToggle to fix viewport issues with smaller sizes
+
+* Footer
+    *Two working modals (front side only)
+
+* Troubleshooting
+    *Responsive 3-way stepper.  Modified so that you cannot skip forward past step 2.  You can skip backwards, but not forward.
+    *List of Main Categories of problems to choose from
+    *List of Sub Categories of problems to choose from
+    *List of Solutions (using Cards)
+    *Solutions link to new component for a full description of solution including:
+        *Brief description of problem & solution
+        *List of tools needed
+        *Parts Info
+        *Step by step how-to instructions
+
+    *Note: All main categories and all sub categories work and will render unique content.  Each problem has a solution (ie problem #1 has a solution #1, problem #2 has a solution #2).  
+    
+    To view what a completed solution looks like, click on Brakes, then Brakes Grinding and then either solution.  Both Front and Rear Brake Solutions work and render unique components.  All solutions would render this type of info.
+
+
+* Maintenance
+    *List of most common maintenance procedures (using Cards)
+    *Links are currently inactive however the concept is the same as the Brake Solutions.  Each component would render a step by step how-to.
+
+
 * Parts List Page
-    - Note: IPL = Illustrated Parts List
-    * Initially use a simple parts list
-    * Show Parts Diagram w/IPL Numbers
-    * Show table with labeled parts.  Table fields for Parts List include:
-        * Name
-        * Isuzu Part Number
-        * IPL Number
-        * Description (includes technical notes)
-        * Replacement (Non-OEM Replacement Options)
-    * ++ OPTIONAL Hover
-        * Hover over part number to reveal extra info
-        * Extra info includes a replacement part number from a non-factory source along with source info, pricing and tech notes
-    * Main Parts List Page is by category (18 categories total)
-        * Only the first 5 categories should work initially.
-        * All other categories will lead to a "under construction/check back" page until time allows for completion.
+    *List of Main Categories for parts
+    *Links/Routes are currently inactive however the concept is the same as the Troubleshooting section.  Each section would have a subsection (or 2) eventually resulting in an Isuzu Illustrated Parts List Diagram.
+
+* NotFound module - I used an image to update this module to better fit the theme of the app.
 
 
 
@@ -69,7 +57,6 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 ## Week 1
 - Create Main Category Page
 - List all Categories
-
 - Category Component
 - List Problems for Categories
 
@@ -85,5 +72,4 @@ Website that allows VehiCross owners to find solutions to most common vehicle pr
 
 ## Week 4
 - Upgrade U.I.
-- Add searching
 - Add more problems to look at
