@@ -13,6 +13,8 @@ Website that allows Isuzu VehiCross owners to find solutions to most common vehi
 
 ## Features
 
+* For best experience in Troubleshooting section, click on Brakes, then Brakes Grinding, then either of the solutions.
+
 * Home
     *Initial load presents a carousel.  Mousing over any part of the images pauses the carousel. 
 
