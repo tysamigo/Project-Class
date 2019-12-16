@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import brakes1 from '../../../assets/images/brakes_1.jpg';
 import brakes2 from '../../../assets/images/brakes_2.jpg';
-import { Switch, Route, BrowserRouter, Link } from 'react-router-dom';
-import BrakeGrindingSolutionFrontBrakes from './BrakeGrindingSolutionFrontBrakes';
+import { Link } from 'react-router-dom';
+
 
 export default class BrakeGrindingSolution extends React.Component {
     render() {
