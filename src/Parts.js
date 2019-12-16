@@ -7,7 +7,8 @@ export default class Parts extends React.Component {
     render() {
         return (
         <Container className="pb-5">
-            <h1 className="heading mt-5 mb-5">Parts</h1>
+            <h1 className="heading mt-5 mb-4">Parts</h1>
+            <h4 className="mb-4">Select a Category below</h4>
             <ListGroup className="pb-5">
                 <ListGroup.Item action variant="light">Automatic Transmission</ListGroup.Item>
                 <ListGroup.Item action variant="light">Body</ListGroup.Item>
