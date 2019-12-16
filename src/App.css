@@ -13,12 +13,13 @@ Carousel Styles
 Navbar Styles
 *************************** */
 
-.navbar .navbar-nav .nav-link {
+.navbar-light .nav a.nav-link {
   color: black;
   font-size: 1.15rem;
 }
 
-.navbar .navbar-nav .nav-link:hover {
+.navbar-light .nav a.nav-link:hover,
+.navbar-light .nav a.nav-link .active {
   color: red;
 }
 
@@ -28,7 +29,7 @@ Navbar Styles
 Basic Styles
 *************************** */
 .body {
-  padding-top: 0px;
+  padding-top: 50px;
 }
 
 .container {
